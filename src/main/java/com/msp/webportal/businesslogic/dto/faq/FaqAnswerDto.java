@@ -1,0 +1,96 @@
+package com.msp.webportal.businesslogic.dto.faq;
+
+
+
+
+import com.msp.webportal.businesslogic.commonUtil.UniqueIdGenerator;
+
+import javax.persistence.Column;
+import java.time.LocalDateTime;
+
+public class FaqAnswerDto {
+    private Long id;
+    private String question;
+
+    private String faqid = UniqueIdGenerator.getId();
+    private String faqCollapse;
+    @Column(name = "answer", length = 1000)
+    private String answer;
+    private boolean status;
+    private String topics;
+    private Long order;
+
+    public String getTopics() {
+        return topics;
+    }
+
+    public void setTopics(String topics) {
+        this.topics = topics;
+    }
+
+    private LocalDateTime createdDate;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public String getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public String getFaqid() {
+        return faqid;
+    }
+
+    public void setFaqid(String faqid) {
+        this.faqid = faqid;
+    }
+
+    public String getFaqCollapse() {
+        return faqCollapse;
+    }
+
+    public void setFaqCollapse(String faqCollapse) {
+        this.faqCollapse = faqCollapse;
+    }
+
+    public Long getOrder() {
+        return order;
+    }
+
+    public void setOrder(Long order) {
+        this.order = order;
+    }
+}
